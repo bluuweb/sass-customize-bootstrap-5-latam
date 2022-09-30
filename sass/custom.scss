@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap');
+
+$primary: chocolate;
+$font-family-base: 'Roboto Mono', monospace;
+$enable-shadows: true;
+
+// $theme-colors: (
+//   "primary":    $primary,
+//   "secondary":  $secondary,
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+//   "light":      $light,
+//   "dark":       $dark,
+//   "red-900": red
+// );
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.bg-indigo {
+    background: $indigo-900;
+}
+
+.card {
+    @extend .card;
+    background: #000;
+    color: white;
+}
