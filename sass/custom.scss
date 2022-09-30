@@ -1,27 +1,47 @@
+// Aquí importamos la fuente desde Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap');
 
-$primary: chocolate;
+// Inicializamos la variable para que se reemplace en Bootstrap.
 $font-family-base: 'Roboto Mono', monospace;
+
+// Inicializamos colores base, estos se reemplazarán en toda la librería de Bootstrap.
+$primary: #0dcaf0;
+$secondary: #0d6efd;
+$success: #6610f2;
+$info: #6f42c1;
+$warning: #fd7e14;
+$danger: #d63384;
+$light: rgb(226, 225, 225);
+$dark: black;
+
+// Theme colors es la paleta principal de Bootstrap, con esta puedes agregar tus propios colores adicionales
+// permitiendo utilizar bg-red-900 text-red-900 alert-red-900 etc
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "red-900": red
+);
+
+// Activar carácteristicas adicionales a Bootstrap
 $enable-shadows: true;
 
-// $theme-colors: (
-//   "primary":    $primary,
-//   "secondary":  $secondary,
-//   "success":    $success,
-//   "info":       $info,
-//   "warning":    $warning,
-//   "danger":     $danger,
-//   "light":      $light,
-//   "dark":       $dark,
-//   "red-900": red
-// );
-
+// Traemos todo el sass de Bootstrap.
+// Ojo no es la manera correcta pero por ahora andamos bien.
+// Manera correcta utilizar cada uno de los import para optimizar el css.
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+// Clases personalizadas
 .bg-indigo {
     background: $indigo-900;
 }
 
+// Ej: para utilzar el @extend
 .card {
     @extend .card;
     background: #000;
