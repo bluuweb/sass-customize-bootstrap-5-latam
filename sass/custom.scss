@@ -42,7 +42,7 @@ $enable-shadows: true;
 }
 
 // Ej: para utilzar el @extend
-.card {
+.card-black {
     @extend .card;
     background: #000;
     color: white;
